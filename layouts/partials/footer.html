@@ -16,7 +16,7 @@
       </ul>
     </nav>
   {{ end }}
-  <div class="flex justify-between">
+  <div class="flex justify-between items-center">
     <div>
       {{/* Copyright */}}
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -45,7 +45,7 @@
           id="dark-toggle"
           onclick="setPreferredAppearance('dark');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
+          class="flex justify-center items-center inline px-1 py-1 border rounded-md border-neutral-300 dark:hidden hover:text-primary-500 hover:border-primary-400"
           title="{{ i18n "footer.dark_appearance" }}"
         >
           {{ partial "icon.html" "moon" }}
@@ -54,7 +54,7 @@
           id="light-toggle"
           onclick="setPreferredAppearance('light');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
+          class="flex justify-center items-center hidden px-1 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
           title="{{ i18n "footer.light_appearance" }}"
         >
           {{ partial "icon.html" "sun" }}

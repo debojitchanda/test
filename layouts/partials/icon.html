@@ -1,0 +1,6 @@
+{{ $icon := resources.Get (print "icons/" . ".svg") }}
+{{ if $icon }}
+  <span class="h-30 w-30 icon">
+    {{ $icon.Content | safeHTML }}
+  </span>
+{{ end }}
