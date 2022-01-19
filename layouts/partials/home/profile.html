@@ -5,12 +5,13 @@
 >
   <header class="flex flex-col items-center mb-3">
     {{ with .Site.Author.image }}
-      <img class="mb-2 rounded-2xl shadow-md hover:rounded-3xl hover:shadow-lg hover:w-40 hover:h-40 w-36 h-36 animate-movement duration-150" alt="Author" src="{{ . | relURL }}" />
+      <img class="mb-8 hover:border-b-2 rounded-3xl hover:mb-4 hover:rounded-2xl hover:w-40 hover:h-40 w-36 h-36 animate-movement duration-100" alt="Author" src="{{ . | relURL }}" />
     {{ end }}
+  </br>
     <h1 class="text-4xl font-extrabold">
       {{ .Site.Author.name | default .Site.Title }}
     </h1>
-    <div class="mt-1 text-2xl">
+    <div class="mt-2 text-2xl">
       {{ partialCached "author-links.html" . }}
     </div>
   </header>

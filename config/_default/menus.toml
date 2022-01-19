@@ -17,23 +17,33 @@
 
 [[main]]
   name = "Research"
-  pageRef = "research"
+  pageRef = "/research.md"
   weight = 20
 
 [[main]]
   name = "Publications"
-  pageRef = "publications"
+  pageRef = "/publications.md"
   weight = 30
 
 [[main]]
   name = "Teaching"
-  pageRef = "teaching"
+  pageRef = "/teaching.md"
   weight = 40
 
+# [[main]]
+#   name = "Courses"
+#   pageRef = "courses"
+#   weight = 45
+
+# [[main]]
+#   name = "Contact"
+#   pageRef = "contact"
+#   weight = 50
+
 [[main]]
-  name = "Contact"
-  pageRef = "contact"
-  weight = 50
+  name = "Blog"
+  pageRef = "posts"
+  weight = 60
 
 
 # -- Footer Menu --

@@ -1,6 +1,6 @@
 ---
 title: "Research"
-date: 2022-01-17T22:00:05+05:30
-draft: true
+date: 2022-01-20T02:47:43+05:30
+draft: false
 ---
-
+My research.

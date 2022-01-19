@@ -45,7 +45,7 @@
           id="dark-toggle"
           onclick="setPreferredAppearance('dark');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="flex justify-center items-center inline px-1 py-1 border rounded-md border-neutral-300 dark:hidden hover:text-primary-500 hover:border-primary-400"
+          class="flex justify-center items-center inline px-1 py-1 border-[1px] rounded-full text-neutral-500 hover:rounded-md dark:hidden hover:text-neutral-600"
           title="{{ i18n "footer.dark_appearance" }}"
         >
           {{ partial "icon.html" "moon" }}
@@ -54,7 +54,7 @@
           id="light-toggle"
           onclick="setPreferredAppearance('light');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="flex justify-center items-center hidden px-1 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
+          class="flex justify-center items-center hidden px-1 py-1 border-[1px] rounded-full text-neutral-400 hover:rounded-md cursor-pointer dark:inline hover:text-neutral-200"
           title="{{ i18n "footer.light_appearance" }}"
         >
           {{ partial "icon.html" "sun" }}
@@ -63,6 +63,7 @@
     {{ end }}
   </div>
   {{/* Extend footer - eg. for extra scripts, etc. */}}
+  
   {{ if templates.Exists "partials/extend-footer.html" }}
     {{ partialCached "extend-footer.html" . }}
   {{ end }}

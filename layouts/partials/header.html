@@ -1,0 +1,46 @@
+<header
+  class="flex justify-between py-6 font-semibold md:items-center md:py-10 text-neutral-900 dark:text-neutral"
+>
+  {{/* Site logo/title */}}
+  <div>
+    {{ if .Site.Params.Logo -}}
+      {{ $logo := resources.Get .Site.Params.Logo }}
+      {{ if $logo }}
+        <a href="{{ "/" | relURL }}">
+          <img
+            src="{{ $logo.RelPermalink }}"
+            width="{{ div $logo.Width 2 }}"
+            height="{{ div $logo.Height 2 }}"
+            class="max-w-[10rem] max-h-[10rem] object-scale-down object-left"
+            alt="{{ .Site.Title }}"
+          />
+        </a>
+      {{ end }}
+    {{ else }}
+      <a
+        class="ml-1 text-primary-400 hover:text-primary-600 animate-movement duration-100"
+        rel="me"
+        href="{{ "/" | relURL }}">
+        Home
+        <!-- {{ .Site.Title | markdownify | emojify }} -->
+        </a>
+    {{- end }}
+  </div>
+  {{/* Main menu */}}
+  {{ if .Site.Menus.main }}
+    <nav>
+      <ul class="flex flex-col list-none md:flex-row">
+        {{ range .Site.Menus.main }}
+          <li class="mb-1 text-right md:mb-0 md:mr-4 md:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-8"
+              href="{{ .URL }}"
+              title="{{ .Title }}"
+              >{{ .Name | markdownify | emojify }}</a
+            >
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
+</header>
