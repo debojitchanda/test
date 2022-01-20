@@ -18,7 +18,7 @@
       {{ end }}
     {{ else }}
       <a
-        class="ml-1 text-primary-400 hover:text-primary-600 animate-movement duration-100"
+        class="ml-1 text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
         rel="me"
         href="{{ "/" | relURL }}">
         Home
@@ -33,7 +33,7 @@
         {{ range .Site.Menus.main }}
           <li class="mb-1 text-right md:mb-0 md:mr-4 md:last:mr-0">
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-8"
+              class="text-primary-500 hover:underline hover:text-primary-700 hover:underline-primary-700 dark:hover:underline-primary-300 dark:hover:text-primary-300 hover:underline-thickness-bold hover:underline-offset-[5px]"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a
